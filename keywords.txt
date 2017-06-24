@@ -1,0 +1,49 @@
+#######################################
+# Syntax Coloring Map For M10SD
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+M10SD_STRUCT	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin	KEYWORD2
+fopen	KEYWORD2
+fread	KEYWORD2
+fwrite	KEYWORD2
+
+#######################################
+# Instances (KEYWORD3)
+#######################################
+
+SD	KEYWORD3
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+SD_CSR_RESET	LITERAL1
+SD_CSR_START	LITERAL1
+SD_CSR_INC_ADDR	LITERAL1
+SD_CSR_R1_R1B	LITERAL1
+SD_CSR_R2	LITERAL1
+SD_CSR_R3_R7	LITERAL1
+SD_SCLK_SLOW	LITERAL1
+SD_SCLK_FAST	LITERAL1
+SD_R1_IDLE_STATE	LITERAL1
+SD_R1_ERASE_RESET	LITERAL1
+SD_R1_ILLEGAL_CMD	LITERAL1
+SD_R1_CRC_ERROR	LITERAL1
+SD_R1_ERASE_SEQ_ERR	LITERAL1
+SD_R1_ADDRESS_ERROR	LITERAL1
+SD_R1_PARAMETER_ERR	LITERAL1
+SD_TYPE_SDC_V1	LITERAL1
+SD_TYPE_SDC_V2	LITERAL1
+SD_TYPE_SDHC_SDXC	LITERAL1
+SD_RET_OK	LITERAL1
+SD_RET_TIME_OUT	LITERAL1
+SD_RET_CRC_FAIL	LITERAL1
