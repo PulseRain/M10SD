@@ -738,7 +738,7 @@ static
 FATFS *FatFs; /* Pointer to the file system object (logical drive) */
 
 /* Fill memory */
-static void mem_set (uint8_t* dst, uint8_t val, uint16_t cnt) {
+static void mem_set (uint8_t* dst, uint8_t val, uint16_t cnt) __reentrant {
   uint8_t *d = dst;
   while (cnt--) *d++ = val;
 }
@@ -980,7 +980,7 @@ static
 FRESULT dir_read (
   DIR *dj,    /* Pointer to the directory object to store read object name */
   BYTE *dir   /* 32-byte working buffer */
-) 
+) __reentrant
 {
   FRESULT res;
   BYTE a, c;
@@ -1166,7 +1166,7 @@ static
 BYTE check_fs ( /* 0:The FAT boot record, 1:Valid boot record but not an FAT, 2:Not a boot record, 3:Error */
   BYTE *buf,  /* Working buffer */
   DWORD sect  /* Sector# (lba) to check if it is an FAT boot record or not */
-)
+) __reentrant
 {
   if (disk_readp(buf, sect, 510, 2))    /* Read the boot record */
     return 3;
